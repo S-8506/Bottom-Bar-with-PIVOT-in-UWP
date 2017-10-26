@@ -1,0 +1,168 @@
+<Grid Background="{ThemeResource  ApplicationPageBackgroundThemeBrush}">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+
+            <RowDefinition  />
+           
+        </Grid.RowDefinitions>
+        <Border Background="#FF4544" HorizontalAlignment="Stretch" >
+            <StackPanel Orientation="Horizontal">
+                <Button Background="#6f4b51" Height="30" Width="40" HorizontalAlignment="Left"  FontFamily="segoe mdl2 assets" Content="&#xE8FD;" Click="Button_Click" FontWeight="ExtraBold" FontSize="20" Foreground="White" VerticalAlignment="Bottom"  >
+                </Button>
+                <TextBlock  Text="Music Player" TextAlignment="Center" Width="130" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" Foreground="White"></TextBlock>
+            </StackPanel>
+
+        </Border>
+        <SplitView x:Name="_splitMode" Grid.Row="1" IsPaneOpen="False" VerticalAlignment="Stretch" OpenPaneLength="200" DisplayMode="Overlay" CompactPaneLength="40" Grid.RowSpan="2" >
+            <SplitView.Pane >
+                <Grid>
+                    <Grid.RowDefinitions>
+
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+
+                    <Grid  HorizontalAlignment="Left"  Width="200"  Background="#FF4544" >
+
+                        <StackPanel Orientation="Vertical" Width="200">
+                            <Button Click="HomeBt" Background="Transparent" HorizontalAlignment="Stretch"   >
+                                <StackPanel Orientation="Horizontal" x:Name="_HomeContent" HorizontalAlignment="Left" Width="200" >
+                                    <TextBlock  VerticalAlignment="Center" Foreground="White" FontFamily="Segoe mdl2 assets" Text="&#xE80f; "  FontSize="18"  Width="40" />
+                                    <TextBlock  VerticalAlignment="Center" Foreground="White" Text="Home" FontSize="18"  />
+                                </StackPanel>
+                            </Button>
+                            <Button  Click="RecentBt" Background="Transparent" HorizontalAlignment="Stretch" >
+                                <StackPanel Orientation="Horizontal"  HorizontalAlignment="Left" Width="200">
+                                    <TextBlock  VerticalAlignment="Center" Foreground="White" FontFamily="Segoe mdl2 assets" Text="&#xE823; " FontSize="18" Width="40"  />
+                                    <TextBlock VerticalAlignment="Center"  Foreground="White" Text="Recent" FontSize="18" ></TextBlock>
+                                </StackPanel>
+                            </Button>
+                            <Button  Click="MusicLibBt"  Background="Transparent"  HorizontalAlignment="Stretch" >
+                                <StackPanel Orientation="Horizontal"  HorizontalAlignment="Left" Width="200">
+                                    <TextBlock  VerticalAlignment="Center" Foreground="White" FontFamily="Segoe mdl2 assets" Text="&#xE8F1; " FontSize="18"  Width="40"  />
+                                    <TextBlock VerticalAlignment="Center" Foreground="White" Text="Music Library" FontSize="18" ></TextBlock>
+
+                                </StackPanel>
+                            </Button>
+                            <Button  Click="SettingBt" Background="Transparent"  HorizontalAlignment="Right" Width="200" >
+                                <StackPanel Orientation="Horizontal"  HorizontalAlignment="Left" Width="200">
+                                    <TextBlock  VerticalAlignment="Center" Foreground="White" FontFamily="Segoe mdl2 assets" Text="&#xE713; " FontSize="18"  Width="40"  />
+
+                                    <TextBlock VerticalAlignment="Center"  Foreground="White" Text="Setting" FontSize="18" ></TextBlock>
+                                </StackPanel>
+                            </Button>
+                            <Button Click="HelpBt"  Background="Transparent"  HorizontalAlignment="Stretch">
+                                <StackPanel Orientation="Horizontal"  HorizontalAlignment="Left" Width="200">
+                                    <TextBlock  VerticalAlignment="Center" Foreground="White" FontFamily="Segoe mdl2 assets" Text="&#xE897; " FontSize="18" Width="40" />
+                                    <TextBlock VerticalAlignment="Center"  Foreground="White" Text="Help and Feature" FontSize="18" ></TextBlock>
+                                </StackPanel>
+                            </Button>
+                        </StackPanel>
+                    </Grid>
+
+                </Grid>
+
+            </SplitView.Pane>
+            <SplitView.Content>
+                <Frame x:Name="mainFrame" ></Frame>
+            </SplitView.Content>
+        </SplitView>
+        <Pivot VerticalAlignment="Bottom"   HorizontalAlignment="Stretch" Grid.Row="2">
+            <PivotItem  Margin="0,0,0,0">
+                <Grid Background="#FF5554" >
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button Click="HomeBt"  Background="Transparent" VerticalAlignment="Stretch" Width="85">
+                            <Button.Content>
+                                <StackPanel Orientation="Vertical">
+                                    <TextBlock TextAlignment="Center" FontSize="20" Foreground="White" FontFamily="segoe mdl2 assets" Text="&#xE80F;" ></TextBlock>
+                                    <TextBlock  TextAlignment="Center" FontSize="20" Foreground="White"  Text="Home" ></TextBlock>
+                                </StackPanel>
+                            </Button.Content>
+                        </Button>
+                        <Button Background="Transparent" VerticalAlignment="Stretch" Width="85">
+                            <Button.Content>
+                                <StackPanel Orientation="Vertical">
+                                    <TextBlock TextAlignment="Center" FontSize="20" Foreground="White" FontFamily="segoe mdl2 assets" Text="&#xE93C;" > </TextBlock>
+                                    <TextBlock  TextAlignment="Center" FontSize="20" Foreground="White"  Text="Music" ></TextBlock>
+                                </StackPanel>
+                            </Button.Content>
+                        </Button>
+                        <Button Click="MusicLibBt" Background="Transparent" VerticalAlignment="Stretch" Width="85">
+                            <Button.Content>
+                                <StackPanel Orientation="Vertical">
+                                    <TextBlock TextAlignment="Center" FontSize="20" Foreground="White" FontFamily="segoe mdl2 assets" Text="&#xE8F1;" ></TextBlock>
+                                    <TextBlock  TextAlignment="Center" FontSize="20" Foreground="White"  Text="Library" ></TextBlock>
+                                </StackPanel>
+                            </Button.Content>
+                        </Button>
+                        <Button Background="Transparent" VerticalAlignment="Stretch" Width="85">
+                            <Button.Content>
+                                <StackPanel Orientation="Vertical">
+                                    <TextBlock TextAlignment="Center" FontSize="20" Foreground="White" FontFamily="segoe mdl2 assets" Text="&#xE823;" ></TextBlock>
+                                    <TextBlock  TextAlignment="Center" FontSize="20" Foreground="White"  Text="Recent" ></TextBlock>
+                                </StackPanel>
+                            </Button.Content>
+                        </Button>
+                        <Button Background="Transparent" VerticalAlignment="Stretch" Width="85">
+                            <Button.Content>
+                                <StackPanel Orientation="Vertical" VerticalAlignment="Stretch">
+                                    <TextBlock TextAlignment="Center" FontSize="40" Foreground="White" FontFamily="segoe mdl2 assets" Text="&#xE712;" ></TextBlock>
+                                  
+                                </StackPanel>
+                            </Button.Content>
+                        </Button>
+                    </StackPanel>
+                </Grid>
+            </PivotItem>
+            <PivotItem Margin="0,-50,0,0">
+                <Grid Background="#FF5554" >
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button Click="HomeBt"  Background="Transparent" VerticalAlignment="Stretch" Width="85">
+                            <Button.Content>
+                                <StackPanel Orientation="Vertical">
+                                    <TextBlock TextAlignment="Center" FontSize="20" Foreground="White" FontFamily="segoe mdl2 assets" Text="&#xE8E5;" ></TextBlock>
+                                    <TextBlock  TextAlignment="Center" FontSize="20" Foreground="White"  Text="Open" ></TextBlock>
+                                </StackPanel>
+                            </Button.Content>
+                        </Button>
+                        <Button Background="Transparent" VerticalAlignment="Stretch" Width="85">
+                            <Button.Content>
+                                <StackPanel Orientation="Vertical">
+                                    <TextBlock TextAlignment="Center" FontSize="20" Foreground="White" FontFamily="segoe mdl2 assets" Text="&#xE93C;" ></TextBlock>
+                                    <TextBlock  TextAlignment="Center" FontSize="20" Foreground="White"  Text="Music" ></TextBlock>
+                                </StackPanel>
+                            </Button.Content>
+                        </Button>
+                        <Button Background="Transparent" VerticalAlignment="Stretch" Width="85">
+                            <Button.Content>
+                                <StackPanel Orientation="Vertical">
+                                    <TextBlock TextAlignment="Center" FontSize="20" Foreground="White" FontFamily="segoe mdl2 assets" Text="&#xE8F1;" ></TextBlock>
+                                    <TextBlock  TextAlignment="Center" FontSize="20" Foreground="White"  Text="Library" ></TextBlock>
+                                </StackPanel>
+                            </Button.Content>
+                        </Button>
+                        <Button Background="Transparent" VerticalAlignment="Stretch" Width="85">
+                            <Button.Content>
+                                <StackPanel Orientation="Vertical">
+                                    <TextBlock TextAlignment="Center" FontSize="20" Foreground="White" FontFamily="segoe mdl2 assets" Text="&#xE897;" ></TextBlock>
+                                    <TextBlock  TextAlignment="Center" FontSize="20" Foreground="White"  Text="Help" ></TextBlock>
+                                </StackPanel>
+                            </Button.Content>
+                        </Button>
+                        <Button Background="Transparent" VerticalAlignment="Stretch" Width="85">
+                            <Button.Content>
+                                <StackPanel Orientation="Vertical">
+                                    <TextBlock TextAlignment="Center" FontSize="20" Foreground="White" FontFamily="segoe mdl2 assets" Text="&#xE713;" ></TextBlock>
+                                    <TextBlock  TextAlignment="Center" FontSize="20" Foreground="White"  Text="Setting" ></TextBlock>
+                                </StackPanel>
+                            </Button.Content>
+                        </Button>
+                    </StackPanel>
+                </Grid>
+            </PivotItem>
+            <PivotItem Margin="0,-50,0,0">
+                <Grid Background="Green" ></Grid>
+            </PivotItem>
+        </Pivot>
+    </Grid>
